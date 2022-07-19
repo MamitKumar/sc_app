@@ -18,11 +18,14 @@ class Assets {
       AssetGenImage('assets/backgroundimageofferdetail.png');
   static const AssetGenImage clipboard = AssetGenImage('assets/clipboard.png');
   static const AssetGenImage mojdeail = AssetGenImage('assets/mojdeail.png');
+  static const AssetGenImage paytmlogo = AssetGenImage('assets/paytmlogo.png');
   static const AssetGenImage profileAvtar =
       AssetGenImage('assets/profile_avtar.png');
   static const AssetGenImage simplecashbcimage =
       AssetGenImage('assets/simplecashbcimage.png');
   static const AssetGenImage spbcc = AssetGenImage('assets/spbcc.png');
+  static const AssetGenImage transctionIcon =
+      AssetGenImage('assets/transctionIcon.png');
 }
 
 class AssetGenImage {

@@ -34,14 +34,17 @@ class ColorName {
   /// Color: #B2B2B2
   static const Color buttongrey = Color(0xFFB2B2B2);
 
-  /// Color: #E9E9E9
-  static const Color divider = Color(0xFFE9E9E9);
-
   /// Color: #E9F5F9
   static const Color moneycard = Color(0xFFE9F5F9);
 
   /// Color: #5E5E5E
   static const Color offertilesubtitlecolor = Color(0xFF5E5E5E);
+
+  /// Color: #F3F3F3
+  static const Color paytmbc = Color(0xFFF3F3F3);
+
+  /// Color: #D70000
+  static const Color red = Color(0xFFD70000);
 
   /// Color: #B4B4B4
   static const Color taskSubtitleGrey = Color(0xFFB4B4B4);

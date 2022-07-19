@@ -5,8 +5,8 @@ import '../controllers/payouts_controller.dart';
 class PayoutsBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<PayoutsController>(
-      () => PayoutsController(),
+    Get.put<PayoutsController>(
+      PayoutsController(),
     );
   }
 }

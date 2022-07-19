@@ -12,6 +12,7 @@
     <color name="buttongrey">#B2B2B2</color>
     <color name="buttongreen">#46A026</color>
     <color name="moneycard">#E9F5F9</color>
-    <color name="divider">#E9E9E9</color>
+    <color name="paytmbc">#F3F3F3</color>
+    <color name="red">#D70000</color>
 
 </resources>
