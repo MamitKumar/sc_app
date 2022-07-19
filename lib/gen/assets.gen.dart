@@ -14,21 +14,15 @@ class Assets {
 
   static const AssetGenImage simpleCashLogo =
       AssetGenImage('assets/Simple Cash logo.png');
+  static const AssetGenImage backgroundimageofferdetail =
+      AssetGenImage('assets/backgroundimageofferdetail.png');
   static const AssetGenImage clipboard = AssetGenImage('assets/clipboard.png');
-  static const AssetGenImage homebottemicon =
-      AssetGenImage('assets/homebottemicon.png');
   static const AssetGenImage mojdeail = AssetGenImage('assets/mojdeail.png');
-  static const AssetGenImage myrewardbottemicon =
-      AssetGenImage('assets/myrewardbottemicon.png');
-  static const AssetGenImage myrewardofferbottemicon =
-      AssetGenImage('assets/myrewardofferbottemicon.png');
   static const AssetGenImage profileAvtar =
       AssetGenImage('assets/profile_avtar.png');
   static const AssetGenImage simplecashbcimage =
       AssetGenImage('assets/simplecashbcimage.png');
   static const AssetGenImage spbcc = AssetGenImage('assets/spbcc.png');
-  static const AssetGenImage upcommingbottemicon =
-      AssetGenImage('assets/upcommingbottemicon.png');
 }
 
 class AssetGenImage {

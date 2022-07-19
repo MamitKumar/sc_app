@@ -5,6 +5,13 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="ver_boader">#D6D6D6</color>
-    <color name="button">#109AC7</color>
+    <color name="button_other_">#109AC7</color>
+    <color name="offertilesubtitlecolor">#5E5E5E</color>
+    <color name="appsubtitlegrey">#B1B1B1</color>
+    <color name="task_subtitle_grey">#B4B4B4</color>
+    <color name="buttongrey">#B2B2B2</color>
+    <color name="buttongreen">#46A026</color>
+    <color name="moneycard">#E9F5F9</color>
+    <color name="divider">#E9E9E9</color>
 
 </resources>
