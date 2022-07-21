@@ -40,6 +40,9 @@ class ColorName {
   /// Color: #5E5E5E
   static const Color offertilesubtitlecolor = Color(0xFF5E5E5E);
 
+  /// Color: #CD2342
+  static const Color offfeButton = Color(0xFFCD2342);
+
   /// Color: #F3F3F3
   static const Color paytmbc = Color(0xFFF3F3F3);
 

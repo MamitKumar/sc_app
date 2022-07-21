@@ -48,7 +48,7 @@ class SplashView extends GetView<SplashController> {
               ),
                     InkWell(
                       onTap: (){
-                        Get.to(HomeView());
+                        Get.offNamed(Routes.HOME);
                       },
                       child: Padding(
                         padding:  EdgeInsets.only(top: 78.sp ,bottom: 50.sp),

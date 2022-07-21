@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:simple_cash_app_day/app/modules/home/payouts/views/payouts_view.dart';
-import 'package:simple_cash_app_day/app/modules/home/transactions/views/transactions_view.dart';
+import 'package:simple_cash_app_day/app/routes/app_pages.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
 import '../../../../../gen/assets.gen.dart';
-import '../../widgets/wallet_payoutbutton.dart';
-import '../../widgets/wallet_total_ear_card.dart';
-import '../../widgets/wallet_transction_button.dart';
+import '../../../../data/wallet_decoraction.dart';
+import '../Widgets/wallet_payoutbutton.dart';
+import '../Widgets/wallet_total_ear_card.dart';
+import '../Widgets/wallet_transction_button.dart';
 import '../controllers/wallet_controller.dart';
 
 class WalletView extends GetView<WalletController> {
@@ -35,11 +35,7 @@ class WalletView extends GetView<WalletController> {
               padding: EdgeInsets.only(bottom: 23.sp, left: 22.sp),
               child: Text(
                 "₹ 1523.20",
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 40.sp,
-                  color: ColorName.buttonOther,
-                ),
+                style: walletMyMoney,
               ),
             ),
             // container total earning and total wodroall
@@ -50,10 +46,10 @@ class WalletView extends GetView<WalletController> {
             Divider(
               color: ColorName.buttongrey,
             ),
-            //transction button
+            // transction button
             InkWell(
                 onTap: () {
-                  Get.to(TransactionsView());
+                  Get.toNamed(Routes.TRANSACTIONS);
                 },
                 child: TransctionButton()),
             Divider(
@@ -62,7 +58,7 @@ class WalletView extends GetView<WalletController> {
             //payout button
             InkWell(
                 onTap: () {
-                  Get.to(PayoutsView());
+                  Get.toNamed(Routes.PAYOUTS);
                 },
                 child: PayoutButton()),
             Divider(
@@ -74,13 +70,12 @@ class WalletView extends GetView<WalletController> {
     );
   }
 
-
   Padding TotalBalanceText() {
     return Padding(
       padding: EdgeInsets.only(top: 38.sp, bottom: 10.sp, left: 22.sp),
       child: Text(
         "Total Balance",
-        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.sp),
+        style: walletTotalBalance,
       ),
     );
   }

@@ -1,15 +1,19 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController
 var tabIndex = 0.obs;
 
+late final PageController pageController;
+
   void changeTabIndex(int index) {
     tabIndex.value = index;
+    pageController.jumpToPage(index);
   }
-  final count = 0.obs;
   @override
   void onInit() {
+    pageController = PageController();
     super.onInit();
   }
 
@@ -20,5 +24,4 @@ var tabIndex = 0.obs;
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }

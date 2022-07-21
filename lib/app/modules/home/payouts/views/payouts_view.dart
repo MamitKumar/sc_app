@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../../../gen/assets.gen.dart';
-import '../../widgets/payout_list_design.dart';
+import '../widgets/payout_list_design.dart';
 import '../controllers/payouts_controller.dart';
 
 class PayoutsView extends GetView<PayoutsController> {

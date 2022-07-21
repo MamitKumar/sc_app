@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/offer_detail/bindings/offer_detail_binding.dart';
+import '../modules/home/offer_detail/views/offer_detail_view.dart';
 import '../modules/home/payouts/bindings/payouts_binding.dart';
 import '../modules/home/payouts/views/payouts_view.dart';
 import '../modules/home/transactions/bindings/transactions_binding.dart';
@@ -16,7 +18,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -38,6 +40,11 @@ class AppPages {
           name: _Paths.TRANSACTIONS,
           page: () => TransactionsView(),
           binding: TransactionsBinding(),
+        ),
+        GetPage(
+          name: _Paths.OFFER_DETAIL,
+          page: () => OfferDetailView(),
+          binding: OfferDetailBinding(),
         ),
       ],
     ),

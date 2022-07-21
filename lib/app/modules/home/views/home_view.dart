@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:simple_cash_app_day/app/modules/home/views/home_tab_view.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
 import '../controllers/home_controller.dart';
-import '../widgets/appbar.dart';
-import '../widgets/offer_tile_widget.dart';
-import '../widgets/survacardwidget.dart';
+import '../offer_detail/views/offer_detail_view.dart';
 class HomeView extends GetView<HomeController> {
    final TextStyle unselectedLabelStyle = TextStyle(
       color: ColorName.verBoader,
@@ -15,17 +14,15 @@ class HomeView extends GetView<HomeController> {
   final TextStyle selectedLabelStyle =
       TextStyle(color: ColorName.buttonOther, fontWeight: FontWeight.w500, fontSize: 14);
 
-      // ignore: non_constant_identifier_names
-      buildBottomNavigationMenu(context, HomePageController) {
-    return Obx(() => MediaQuery(
-        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-        child: SizedBox(
-          height: 68,
-          child: BottomNavigationBar(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       bottomNavigationBar:
+          Obx(()=>BottomNavigationBar(
             showUnselectedLabels: true,
             showSelectedLabels: true,
-            onTap: HomePageController.changeTabIndex,
-            currentIndex: HomePageController.tabIndex.value,
+            onTap: controller.changeTabIndex,
+            currentIndex: controller.tabIndex.value,
             backgroundColor: ColorName.buttonOther,
             unselectedItemColor: ColorName.verBoader,
             selectedItemColor: ColorName.buttonOther,
@@ -66,40 +63,16 @@ class HomeView extends GetView<HomeController> {
    backgroundColor: ColorName.white,
               ),
             ],
-          ),
-        )));
-  }
-  @override
-   final HomeController HomePageController =
-        Get.put(HomeController(), permanent: false);
-  Widget build(BuildContext context) {
-    return Scaffold(
-       bottomNavigationBar:
-          buildBottomNavigationMenu(context, HomePageController),
+          ),),
           
-      body: Column(
+      body:PageView(
+        controller: controller.pageController,
+        onPageChanged: (value) => controller.tabIndex.value = value,
         children: [
-          AppBarSimpleCash(),
-          ServaCardWidget(),
-          OfferTileCard()
+          HomeTabView(),
+          OfferDetailView(),
         ],
-      ),
-      // body: Column(
-      //   children: [
-      //     // Obx(() => IndexedStack(
-      //     //       index: HomePageController.tabIndex.value,
-      //     //       children: [
-      //     //         HomeView(),
-      //     //         WalletView(),
-      //     //         HomeView(),
-      //     //         WalletView(),
-      //     //       ],
-      //     //     )),
-      //            AppBarSimpleCash(),
-      //     SurveysCard(),
-      //     OfferTileCard() 
-      //   ],
-      // ),
+      )
     );
   }
 }
