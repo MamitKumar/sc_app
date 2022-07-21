@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:simple_cash_app_day/app/modules/home/daily_rewards/views/daily_rewards_view.dart';
 import 'package:simple_cash_app_day/app/modules/home/views/home_tab_view.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
 import '../controllers/home_controller.dart';
@@ -71,6 +72,7 @@ class HomeView extends GetView<HomeController> {
         children: [
           HomeTabView(),
           OfferDetailView(),
+          DailyRewardsView(),
         ],
       )
     );

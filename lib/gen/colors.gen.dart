@@ -34,6 +34,15 @@ class ColorName {
   /// Color: #B2B2B2
   static const Color buttongrey = Color(0xFFB2B2B2);
 
+  /// Color: #708186
+  static const Color dailrewardbuttongrey = Color(0xFF708186);
+
+  /// Color: #B7B7B7
+  static const Color dailrewardbuttongreycollected = Color(0xFFB7B7B7);
+
+  /// Color: #02B9EF
+  static const Color dailyrewardborder = Color(0xFF02B9EF);
+
   /// Color: #E9F5F9
   static const Color moneycard = Color(0xFFE9F5F9);
 

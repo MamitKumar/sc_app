@@ -15,5 +15,8 @@
     <color name="paytmbc">#F3F3F3</color>
     <color name="red">#D70000</color>
   <color name="offfe_button">#CD2342</color>
+  <color name="dailyrewardborder">#02B9EF</color>
+  <color name="dailrewardbuttongrey">#708186</color>
+  <color name="dailrewardbuttongreycollected">#B7B7B7</color>
 
 </resources>

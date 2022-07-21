@@ -9,6 +9,7 @@ abstract class Routes {
   static const PAYOUTS = _Paths.HOME + _Paths.PAYOUTS;
   static const TRANSACTIONS = _Paths.HOME + _Paths.TRANSACTIONS;
   static const OFFER_DETAIL = _Paths.HOME + _Paths.OFFER_DETAIL;
+  static const DAILY_REWARDS = _Paths.HOME + _Paths.DAILY_REWARDS;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const PAYOUTS = '/payouts';
   static const TRANSACTIONS = '/transactions';
   static const OFFER_DETAIL = '/offer-detail';
+  static const DAILY_REWARDS = '/daily-rewards';
 }

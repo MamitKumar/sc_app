@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/daily_rewards/bindings/daily_rewards_binding.dart';
+import '../modules/home/daily_rewards/views/daily_rewards_view.dart';
 import '../modules/home/offer_detail/bindings/offer_detail_binding.dart';
 import '../modules/home/offer_detail/views/offer_detail_view.dart';
 import '../modules/home/payouts/bindings/payouts_binding.dart';
@@ -45,6 +47,11 @@ class AppPages {
           name: _Paths.OFFER_DETAIL,
           page: () => OfferDetailView(),
           binding: OfferDetailBinding(),
+        ),
+        GetPage(
+          name: _Paths.DAILY_REWARDS,
+          page: () => DailyRewardsView(),
+          binding: DailyRewardsBinding(),
         ),
       ],
     ),

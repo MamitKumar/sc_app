@@ -14,10 +14,12 @@ class HomeTabView extends GetView<HomeController> {
       children: [
         AppBarSimpleCash(),
         SurveyCardWidget(),
-        OfferTileCard( 
-          //balance chip
-          offerTileBalanceChip: 450,
-          ),
+        ListView.builder(itemBuilder: (context,indux)=>
+        OfferTileCard(
+          offer: controller.offerTileList[indux],),
+          itemCount: controller.offerTileList.length,
+          shrinkWrap: true,
+        )
 
       ],
     );
