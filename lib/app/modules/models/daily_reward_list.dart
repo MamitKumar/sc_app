@@ -6,8 +6,8 @@ class DailyReward{
   bool isClamed;
   DailyReward(
       {
-         this.isCompleted=true,
-         this.isClamed=false,
+        required this.isCompleted,
+        required this.isClamed,
         required this.title,
         required this.offer,
         required this.discripstion,

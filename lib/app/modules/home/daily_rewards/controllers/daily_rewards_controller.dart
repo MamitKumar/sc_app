@@ -8,7 +8,6 @@ class DailyRewardsController extends GetxController {
   final count = 0.obs;
   @override
   void onInit() {
-     super.onInit();
     dailyRewardList = [
       DailyReward(
         title: "ds",
@@ -18,9 +17,8 @@ class DailyRewardsController extends GetxController {
         discripstion: "dfsdlkjsdl",
       ),
     ];
-  
+    super.onInit();
   }
-
   @override
   void onReady() {
     super.onReady();

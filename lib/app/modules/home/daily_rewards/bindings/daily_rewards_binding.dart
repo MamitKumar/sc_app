@@ -5,7 +5,7 @@ import '../controllers/daily_rewards_controller.dart';
 class DailyRewardsBinding extends Bindings {
   @override
   void dependencies() {
-    Get.put(
+    Get.put<DailyRewardsController>(
       DailyRewardsController()
     );
   }

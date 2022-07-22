@@ -9,6 +9,8 @@ import '../modules/home/payouts/bindings/payouts_binding.dart';
 import '../modules/home/payouts/views/payouts_view.dart';
 import '../modules/home/transactions/bindings/transactions_binding.dart';
 import '../modules/home/transactions/views/transactions_view.dart';
+import '../modules/home/upcoming/bindings/upcoming_binding.dart';
+import '../modules/home/upcoming/views/upcoming_view.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/wallet/bindings/wallet_binding.dart';
 import '../modules/home/wallet/views/wallet_view.dart';
@@ -52,6 +54,11 @@ class AppPages {
           name: _Paths.DAILY_REWARDS,
           page: () => DailyRewardsView(),
           binding: DailyRewardsBinding(),
+        ),
+        GetPage(
+          name: _Paths.UPCOMING,
+          page: () => UpcomingView(),
+          binding: UpcomingBinding(),
         ),
       ],
     ),

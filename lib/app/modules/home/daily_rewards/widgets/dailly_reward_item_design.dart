@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
 
-class DailyRewardTile extends StatelessWidget {
-  const DailyRewardTile({
+class DailyRewardTileDesign extends StatelessWidget {
+  const DailyRewardTileDesign({
     Key? key, required this.reward,
   }) : super(key: key);
   final reward;
@@ -38,7 +38,6 @@ class DailyRewardTile extends StatelessWidget {
                 SizedBox(width: 9.sp,),
                 InkWell(
                   onTap: (){
-
                   },
                   child: reward.iscompleted == true && reward.isclamed == true
                       ? Text(
@@ -54,8 +53,7 @@ class DailyRewardTile extends StatelessWidget {
                       reward.isclamed == false
                       ? Text(
                     "Completed: 20%",
-                    //TODO: some error in collect to tap in gift popup
-                    // style: defaltReward,
+                    // style: defaltReward,s
                   )
                       : Text(""),),
                 const Spacer(),
