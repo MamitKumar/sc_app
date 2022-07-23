@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
 import '../../../../../gen/colors.gen.dart';
-import '../../../../routes/app_pages.dart';
-import '../../widgets/appbar.dart';
+import '../../../routes/app_pages.dart';
+import 'appbar.dart';
+
 
 class DailyRewardAppBar extends StatelessWidget {
   const DailyRewardAppBar({

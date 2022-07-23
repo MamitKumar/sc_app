@@ -1,16 +1,14 @@
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/daily_rewards/bindings/daily_rewards_binding.dart';
-import '../modules/home/daily_rewards/views/daily_rewards_view.dart';
 import '../modules/home/offer_detail/bindings/offer_detail_binding.dart';
 import '../modules/home/offer_detail/views/offer_detail_view.dart';
 import '../modules/home/payouts/bindings/payouts_binding.dart';
 import '../modules/home/payouts/views/payouts_view.dart';
+import '../modules/home/profile/bindings/profile_binding.dart';
+import '../modules/home/profile/views/profile_view.dart';
 import '../modules/home/transactions/bindings/transactions_binding.dart';
 import '../modules/home/transactions/views/transactions_view.dart';
-import '../modules/home/upcoming/bindings/upcoming_binding.dart';
-import '../modules/home/upcoming/views/upcoming_view.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/wallet/bindings/wallet_binding.dart';
 import '../modules/home/wallet/views/wallet_view.dart';
@@ -51,14 +49,9 @@ class AppPages {
           binding: OfferDetailBinding(),
         ),
         GetPage(
-          name: _Paths.DAILY_REWARDS,
-          page: () => DailyRewardsView(),
-          binding: DailyRewardsBinding(),
-        ),
-        GetPage(
-          name: _Paths.UPCOMING,
-          page: () => UpcomingView(),
-          binding: UpcomingBinding(),
+          name: _Paths.PROFILE,
+          page: () => ProfileView(),
+          binding: ProfileBinding(),
         ),
       ],
     ),

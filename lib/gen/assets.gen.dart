@@ -12,15 +12,30 @@ import 'package:flutter/widgets.dart';
 class Assets {
   Assets._();
 
+  static const AssetGenImage appUsage = AssetGenImage('assets/AppUsage.png');
+  static const AssetGenImage language = AssetGenImage('assets/Language.png');
+  static const AssetGenImage logout = AssetGenImage('assets/Logout.png');
+  static const AssetGenImage privacyPolicy =
+      AssetGenImage('assets/PrivacyPolicy.png');
+  static const AssetGenImage rateUs = AssetGenImage('assets/RateUs.png');
   static const AssetGenImage simpleCashLogo =
       AssetGenImage('assets/Simple Cash logo.png');
+  static const AssetGenImage support = AssetGenImage('assets/Support.png');
+  static const AssetGenImage termsConditions =
+      AssetGenImage('assets/TermsConditions.png');
+  static const AssetGenImage arrowright =
+      AssetGenImage('assets/arrowright.png');
   static const AssetGenImage backgroundimageofferdetail =
       AssetGenImage('assets/backgroundimageofferdetail.png');
   static const AssetGenImage clipboard = AssetGenImage('assets/clipboard.png');
+  static const AssetGenImage facebook = AssetGenImage('assets/facebook.png');
+  static const AssetGenImage instagramme =
+      AssetGenImage('assets/instagramme.png');
   static const AssetGenImage mojdeail = AssetGenImage('assets/mojdeail.png');
   static const AssetGenImage paytmlogo = AssetGenImage('assets/paytmlogo.png');
   static const AssetGenImage profileAvtar =
       AssetGenImage('assets/profile_avtar.png');
+  static const AssetGenImage shareicon = AssetGenImage('assets/shareicon.png');
   static const AssetGenImage simplecashbcimage =
       AssetGenImage('assets/simplecashbcimage.png');
   static const AssetGenImage spbcc = AssetGenImage('assets/spbcc.png');

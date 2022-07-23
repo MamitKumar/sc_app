@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:simple_cash_app_day/app/modules/home/daily_rewards/views/daily_rewards_view.dart';
-import 'package:simple_cash_app_day/app/modules/home/upcoming/views/upcoming_view.dart';
 import 'package:simple_cash_app_day/app/modules/home/views/home_tab_view.dart';
+import 'package:simple_cash_app_day/app/modules/home/views/myoffer_tab_view.dart';
+import 'package:simple_cash_app_day/app/modules/home/views/upcomming_tab_view.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
 import '../controllers/home_controller.dart';
 
 import '../offer_detail/views/offer_detail_view.dart';
+import 'daily_rewards_view.dart';
 class HomeView extends GetView<HomeController> {
    final TextStyle unselectedLabelStyle = TextStyle(
       color: ColorName.verBoader,
@@ -73,9 +74,9 @@ class HomeView extends GetView<HomeController> {
         onPageChanged: (value) => controller.tabIndex.value = value,
         children: [
           HomeTabView(),
-          OfferDetailView(),
+          MyofferTabView(),
           DailyRewardsView(),
-          UpcomingView(),
+          UpcommingTabView(),
         ],
       )
     );
