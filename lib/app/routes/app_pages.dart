@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/home/app_usage/bindings/app_usage_binding.dart';
+import '../modules/home/app_usage/views/app_usage_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/offer_detail/bindings/offer_detail_binding.dart';
 import '../modules/home/offer_detail/views/offer_detail_view.dart';
@@ -52,6 +54,11 @@ class AppPages {
           name: _Paths.PROFILE,
           page: () => ProfileView(),
           binding: ProfileBinding(),
+        ),
+        GetPage(
+          name: _Paths.APP_USAGE,
+          page: () => AppUsageView(),
+          binding: AppUsageBinding(),
         ),
       ],
     ),

@@ -16,6 +16,9 @@ class ColorName {
   /// Color: #B1B1B1
   static const Color appsubtitlegrey = Color(0xFFB1B1B1);
 
+  /// Color: #CACACA
+  static const Color appusedis = Color(0xFFCACACA);
+
   /// Color: #1AB6D9
   static const Color backgroundPrimary = Color(0xFF1AB6D9);
 
@@ -43,6 +46,21 @@ class ColorName {
   /// Color: #02B9EF
   static const Color dailyrewardborder = Color(0xFF02B9EF);
 
+  /// Color: #666666
+  static const Color greenDisPoppup = Color(0xFF666666);
+
+  /// Color: #F2FAE8
+  static const Color greenpopbc = Color(0xFFF2FAE8);
+
+  /// Color: #66AB0F
+  static const Color greenpoppup = Color(0xFF66AB0F);
+
+  /// Color: #708186
+  static const Color logutpopupgrey = Color(0xFF708186);
+
+  /// Color: #109AC7
+  static const Color logutpopupprimary = Color(0xFF109AC7);
+
   /// Color: #E9F5F9
   static const Color moneycard = Color(0xFFE9F5F9);
 
@@ -55,8 +73,14 @@ class ColorName {
   /// Color: #F3F3F3
   static const Color paytmbc = Color(0xFFF3F3F3);
 
+  /// Color: #00000033
+  static const Color popupboxshadow = Color(0x00000033);
+
   /// Color: #D70000
   static const Color red = Color(0xFFD70000);
+
+  /// Color: #F4E0E0
+  static const Color redBgPoppup = Color(0xFFF4E0E0);
 
   /// Color: #B4B4B4
   static const Color taskSubtitleGrey = Color(0xFFB4B4B4);

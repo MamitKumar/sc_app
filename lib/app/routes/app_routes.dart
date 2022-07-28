@@ -12,6 +12,7 @@ abstract class Routes {
   static const DAILY_REWARDS = _Paths.HOME + _Paths.DAILY_REWARDS;
   static const UPCOMING = _Paths.HOME + _Paths.UPCOMING;
   static const PROFILE = _Paths.HOME + _Paths.PROFILE;
+  static const APP_USAGE = _Paths.HOME + _Paths.APP_USAGE;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const DAILY_REWARDS = '/daily-rewards';
   static const UPCOMING = '/upcoming';
   static const PROFILE = '/profile';
+  static const APP_USAGE = '/app-usage';
 }

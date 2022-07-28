@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
+import 'package:simple_cash_app_day/app/routes/app_pages.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
-
 import '../../../../../gen/assets.gen.dart';
+import '../../widgets/logout_popup.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -73,7 +73,7 @@ class ProfileView extends GetView<ProfileController> {
               ),
               InkWell(
                 onTap: (){
-
+                  Get.toNamed(Routes.APP_USAGE);
                 },
                 child: const AppUsage(),),
                  const Divider(
@@ -121,7 +121,12 @@ class ProfileView extends GetView<ProfileController> {
               ),
               InkWell(
                 onTap: (){
-
+                  Get.dialog(
+                    AlertDialog(
+                    titlePadding: EdgeInsets.zero,
+                    contentPadding: EdgeInsets.zero,
+                    content: LogoutPopup(),
+                  ));
                 },
                 child: const Logout(),),
                  const Divider(

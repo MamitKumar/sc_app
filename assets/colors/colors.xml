@@ -18,5 +18,12 @@
   <color name="dailyrewardborder">#02B9EF</color>
   <color name="dailrewardbuttongrey">#708186</color>
   <color name="dailrewardbuttongreycollected">#B7B7B7</color>
-
+  <color name="appusedis">#CACACA</color>
+    <color name="greenpoppup">#66AB0F</color>
+    <color name="greenpopbc">#F2FAE8</color>
+    <color name="green_dis_poppup">#666666</color>
+    <color name="red_bg_poppup">#F4E0E0</color>
+    <color name="popupboxshadow">#00000033</color>
+     <color name="logutpopupprimary">#109AC7</color>
+ <color name="logutpopupgrey">#708186</color>
 </resources>
