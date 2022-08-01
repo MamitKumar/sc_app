@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../gen/colors.gen.dart';
+import '../../../data/daily_reward.dart';
 
 class ReferEarnStep extends StatelessWidget {
   const ReferEarnStep({
@@ -17,15 +18,11 @@ class ReferEarnStep extends StatelessWidget {
       children:[
     Padding(
       padding: EdgeInsets.only(top: 29.sp,left: 22.sp),
-      child: Text(stepNum,style: TextStyle(
-        fontSize: 16,fontWeight: FontWeight.w500,color: ColorName.buttonOther
-      ),),
+      child: Text(stepNum,style: refer_StepNum,),
     ),
     Padding(
      padding: EdgeInsets.only(top: 2.sp,left: 22.sp,right: 22.sp,bottom: 16.sp),
-      child: Text(stepDiscripction,style: TextStyle(
-        fontSize: 16,fontWeight: FontWeight.w400,color: ColorName.black
-      ),),
+      child: Text(stepDiscripction,style: referDis,),
     ),
     Divider( color: ColorName.taskSubtitleGrey,),
       ],

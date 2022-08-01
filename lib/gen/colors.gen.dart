@@ -37,6 +37,9 @@ class ColorName {
   /// Color: #B2B2B2
   static const Color buttongrey = Color(0xFFB2B2B2);
 
+  /// Color: #E1A700
+  static const Color buttonofferdetrail = Color(0xFFE1A700);
+
   /// Color: #708186
   static const Color dailrewardbuttongrey = Color(0xFF708186);
 
@@ -81,6 +84,12 @@ class ColorName {
 
   /// Color: #F4E0E0
   static const Color redBgPoppup = Color(0xFFF4E0E0);
+
+  /// Color: #FFD707
+  static const Color splashSPrimary = Color(0xFFFFD707);
+
+  /// Color: #F09000
+  static const Color splashSSecondry = Color(0xFFF09000);
 
   /// Color: #B4B4B4
   static const Color taskSubtitleGrey = Color(0xFFB4B4B4);

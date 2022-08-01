@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
-import 'package:simple_cash_app_day/gen/colors.gen.dart';
-
+import 'package:simple_cash_app_day/app/routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/appbar.dart';
 import '../widgets/offer_tile_widget.dart';
@@ -27,6 +24,7 @@ class HomeTabView extends GetView<HomeController> {
         ),
         Row(
           children: [
+            // ignore: deprecated_member_use
             FlatButton(
                 onPressed: () {
                   Get.dialog(
@@ -37,6 +35,7 @@ class HomeTabView extends GetView<HomeController> {
                   ));
                 },
                 child: Text("succes popup")),
+            // ignore: deprecated_member_use
             FlatButton(
                 onPressed: () {
                   Get.dialog(
@@ -47,7 +46,13 @@ class HomeTabView extends GetView<HomeController> {
                   )
                   );
                 },
-                child: Text("cancel popup"))
+                child: Text("cancel popup")),
+                // ignore: deprecated_member_use
+                FlatButton(
+                onPressed: () {
+                  Get.toNamed(Routes.SPLASH_SEC);
+                },
+                child: Text("splash"))
           ],
         ),
       ],

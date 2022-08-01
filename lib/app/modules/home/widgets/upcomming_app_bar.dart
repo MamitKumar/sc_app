@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../gen/colors.gen.dart';
+import '../../../data/upcomming.dart';
 import '../../../routes/app_pages.dart';
 import 'appbar.dart';
 
@@ -25,7 +26,7 @@ class UpcommingAppBar extends StatelessWidget {
                 child: Text(
                   "Daily Rewards",
                   style:
-                      TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w500),
+                      upcommingTitle,
                 ),
               ),
               Spacer(),
@@ -39,10 +40,7 @@ class UpcommingAppBar extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.only(top: 50.sp),
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: ColorName.backgroundSecondry, width: 1.6),
-                          borderRadius: BorderRadius.circular(28.sp)),
+                      decoration: upcommingContainer,
                       child: Padding(
                         padding: EdgeInsets.only(
                             left: 18.sp,

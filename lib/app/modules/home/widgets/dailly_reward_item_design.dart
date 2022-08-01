@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
 
+import '../../../data/daily_reward.dart';
+
 class DailyRewardTileDesign extends StatelessWidget {
   const DailyRewardTileDesign({
     Key? key,
@@ -45,7 +47,7 @@ class DailyRewardTileDesign extends StatelessWidget {
                 Text(
                   "Daily Login",
                   style:
-                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                       DailyReDesignTitle,
                 ),
                 SizedBox(
                   width: 9.sp,
@@ -55,11 +57,7 @@ class DailyRewardTileDesign extends StatelessWidget {
                   child: reward.isCompleted == true && reward.isClamed == true
                       ? Text(
                           "Collected",
-                          style: TextStyle(
-                            fontSize: 11.sp,
-                            color: ColorName.dailrewardbuttongreycollected,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          style: dailyR_collect,
                         )
                       : reward.isCompleted == true &&
                                   reward.isClamed == false ||
@@ -67,21 +65,13 @@ class DailyRewardTileDesign extends StatelessWidget {
                                   reward.isClamed == true
                           ? Text(
                               "Tap to collect",
-                              style: TextStyle(
-                                fontSize: 11.sp,
-                                color: ColorName.buttonOther,
-                                fontWeight: FontWeight.w400,
-                              ),
+                              style: dailyR_TapToCollect,
                             )
                           : reward.isCompleted == false &&
                                   reward.isClamed == false
                               ? Text(
                                   "Completed: 20%",
-                                  style: TextStyle(
-                                    fontSize: 11.sp,
-                                    color: ColorName.dailrewardbuttongrey,
-                                    fontWeight: FontWeight.w400,
-                                  ),
+                                  style: dailyRewardProcess,
                                 )
                               : Text(""),
                 ),
@@ -118,11 +108,7 @@ class DailyRewardTileDesign extends StatelessWidget {
             padding: EdgeInsets.only(top: 0.sp, left: 14.sp, bottom: 14.sp),
             child: Text(
               "Login for 3 times a day",
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-                color: ColorName.dailrewardbuttongrey,
-              ),
+              style: dailyR_Dis,
             ),
           ),
         ],

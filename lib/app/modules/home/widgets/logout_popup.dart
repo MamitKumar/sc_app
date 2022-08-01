@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../gen/colors.gen.dart';
+import '../../../data/all_popup_dec.dart';
 
 class LogoutPopup extends StatelessWidget {
   const LogoutPopup({
@@ -25,10 +26,7 @@ class LogoutPopup extends StatelessWidget {
                   vertical: 20.sp),
               child: Text(
                 "Congratulations",
-                style: TextStyle(
-    fontSize: 22.sp,
-    color: ColorName.white,
-    fontWeight: FontWeight.w500),textAlign: TextAlign.center,
+                style: title,textAlign: TextAlign.center,
               ),
             ),
           ),
@@ -42,10 +40,7 @@ class LogoutPopup extends StatelessWidget {
                   child: Center(
     child: Text(
         "Do you want to Logout?",
-                style: TextStyle(
-      fontSize: 16.sp,
-      color: ColorName.black,
-      fontWeight: FontWeight.w400),textAlign: TextAlign.center,),
+                style: logoutSub,textAlign: TextAlign.center,),
                   ),
                 ),
                 InkWell(
@@ -53,25 +48,12 @@ class LogoutPopup extends StatelessWidget {
     Get.back();
                   },
                   child: Container(
-    decoration: BoxDecoration(
-      borderRadius:
-          BorderRadius.circular(360.sp),
-      color: ColorName.logutpopupprimary,
-      boxShadow: [
-        BoxShadow(
-          color: ColorName.popupboxshadow,
-          blurRadius: 24.sp,
-        )
-      ]
-    ),
+    decoration: logoutConDecoraction,
     child: Padding(
       padding: EdgeInsets.symmetric(
           vertical: 15.sp, horizontal: 65.sp),
       child: Text("No",
-                style: TextStyle(
-    fontSize: 18.sp,
-    color: ColorName.white,
-    fontWeight: FontWeight.w500),),
+                style: logoutTextDec),
     ),
                   ),
                 ),

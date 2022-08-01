@@ -26,4 +26,8 @@
     <color name="popupboxshadow">#00000033</color>
      <color name="logutpopupprimary">#109AC7</color>
  <color name="logutpopupgrey">#708186</color>
+  <color name="splash_s_primary">#FFD707</color>
+   <color name="splash_s_secondry">#F09000</color>
+    <color name="buttonofferdetrail">#E1A700</color>
+
 </resources>

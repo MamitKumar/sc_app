@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../gen/colors.gen.dart';
+import '../../../data/upcomming.dart';
 
 class UpcommingTimerCard extends StatelessWidget {
   const UpcommingTimerCard({Key? key}) : super(key: key);
@@ -11,13 +10,7 @@ class UpcommingTimerCard extends StatelessWidget {
     return Container(
           margin: EdgeInsets.only(left: 22.sp, right: 22.sp, top: 51.sp),
           width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(13.sp),
-            gradient: LinearGradient(colors: [
-              ColorName.backgroundPrimary,
-              ColorName.backgroundSecondry
-            ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
-          ),
+          decoration: upcommingTimerCard,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,10 +19,7 @@ class UpcommingTimerCard extends StatelessWidget {
                 padding: EdgeInsets.only(top: 26.sp, left: 19.sp),
                 child: Text(
                   "Total Gifts Value",
-                  style: TextStyle(
-                      fontSize: 19.sp,
-                      fontWeight: FontWeight.w600,
-                      color: ColorName.white),
+                  style:  upcommingCardTitle,
                 ),
               ),
               Padding(
@@ -37,10 +27,7 @@ class UpcommingTimerCard extends StatelessWidget {
                     EdgeInsets.only(top: 11.sp, left: 20.sp, bottom: 22.sp),
                 child: Text(
                   "12h 32m 12s",
-                  style: TextStyle(
-                      fontSize: 43.sp,
-                      fontWeight: FontWeight.w600,
-                      color: ColorName.white),
+                  style: upcommingCardTime,
                 ),
               ),
             ],

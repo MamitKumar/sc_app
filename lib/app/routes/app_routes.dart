@@ -13,6 +13,7 @@ abstract class Routes {
   static const UPCOMING = _Paths.HOME + _Paths.UPCOMING;
   static const PROFILE = _Paths.HOME + _Paths.PROFILE;
   static const APP_USAGE = _Paths.HOME + _Paths.APP_USAGE;
+  static const SPLASH_SEC = _Paths.SPLASH_SEC;
 }
 
 abstract class _Paths {
@@ -27,4 +28,6 @@ abstract class _Paths {
   static const UPCOMING = '/upcoming';
   static const PROFILE = '/profile';
   static const APP_USAGE = '/app-usage';
+
+  static const SPLASH_SEC = '/splash-sec';
 }

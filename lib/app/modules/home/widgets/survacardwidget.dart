@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../gen/assets.gen.dart';
 import '../../../../gen/colors.gen.dart';
+import '../../../data/home_decoraction.dart';
 
 class SurveyCardWidget extends StatelessWidget {
   const SurveyCardWidget({Key? key}) : super(key: key);
@@ -15,12 +16,7 @@ class SurveyCardWidget extends StatelessWidget {
           height: 134.sp,
           margin: EdgeInsets.only(left: 22.sp, right: 22.sp, top: 51.sp),
           width: double.infinity,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(13.sp),
-              gradient: LinearGradient(colors: [
-                ColorName.backgroundPrimary,
-                ColorName.backgroundSecondry
-              ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          decoration: homeSureysDec,
           child: Padding(
             padding: EdgeInsets.only(left: 21.sp, top: 16.sp, bottom: 19.sp),
             child: Column(
@@ -31,10 +27,7 @@ class SurveyCardWidget extends StatelessWidget {
                   padding: EdgeInsets.only(right: 154.sp),
                   child: Text(
                     "Best featured surveys for you!",
-                    style: TextStyle(
-                        color: ColorName.white,
-                        fontSize: 22.sp,
-                        fontWeight: FontWeight.w600),
+                    style: surveyTitle,
                   ),
                 ),
                 Spacer(),
@@ -42,26 +35,17 @@ class SurveyCardWidget extends StatelessWidget {
                   children: [
                     Text(
                       "173 Surveys",
-                      style: TextStyle(
-                          color: ColorName.white,
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400),
+                      style: surveyNum,
                     ),
                     DiviDer(),
                     Text(
                       "1200 Participants",
-                      style: TextStyle(
-                          color: ColorName.white,
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400),
+                      style: surveyNum,
                     ),
                     DiviDer(),
                     Text(
                       "₹45,132 Winnings",
-                      style: TextStyle(
-                          color: ColorName.white,
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400),
+                      style: surveyNum,
                     ),
                   ],
                 )

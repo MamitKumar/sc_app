@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../../../../gen/assets.gen.dart';
 import '../../../../gen/colors.gen.dart';
+import '../../../data/offer_tile.dart';
 import '../offer_detail/views/offer_detail_view.dart';
 
 class OfferTileCard extends StatelessWidget {
@@ -29,13 +30,7 @@ class OfferTileCard extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [Colors.white,ColorName.white, Colors.white10],
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight),
-                border: Border.all(color: ColorName.buttonOther),
-                borderRadius: BorderRadius.circular(13.sp)),
+            decoration:offerTileContainer,
             child: Padding(
               padding:
                   EdgeInsets.only(left: 12.sp, top: 12.sp, bottom: 12.sp),
@@ -58,16 +53,14 @@ class OfferTileCard extends StatelessWidget {
                     ),
                     child: Text(
                       offer.title,
-                      style: TextStyle(
-                          fontSize: 18.sp, fontWeight: FontWeight.w600),
+                      style: offerTileTitle,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 7.sp, bottom: 8.sp),
                     child: Text(
                       offer.subTitle,
-                      style: TextStyle(
-                          fontSize: 13.sp, fontWeight: FontWeight.w500),
+                      style: offerTileSub,
                     ),
                   ),
                   Row(
@@ -77,10 +70,7 @@ class OfferTileCard extends StatelessWidget {
                             Get.to(OfferDetailView(),);
                           },
                           child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6.sp),
-                              color: ColorName.buttonOther,
-                            ),
+                            decoration: offerTileButton,
                             child: Padding(
                               padding: EdgeInsets.symmetric(
                                   vertical: 10.sp, horizontal: 13.sp),
@@ -93,7 +83,7 @@ class OfferTileCard extends StatelessWidget {
                         child: Assets.profileAvtar.image(width: 18.sp,
                         height: 14.sp),
                       ),
-                      Text("${offer.user}",style: TextStyle(fontSize: 12.sp,fontWeight: FontWeight.w500),),
+                      Text("${offer.user}",style: offerTileUserDec,),
                     ],
                   )
                 ],

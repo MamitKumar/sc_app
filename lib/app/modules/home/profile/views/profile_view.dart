@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:simple_cash_app_day/app/routes/app_pages.dart';
 import 'package:simple_cash_app_day/gen/colors.gen.dart';
 import '../../../../../gen/assets.gen.dart';
+import '../../../../data/profile_decoraction.dart';
 import '../../widgets/logout_popup.dart';
 import '../controllers/profile_controller.dart';
 
@@ -12,155 +13,157 @@ class ProfileView extends GetView<ProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       body: Stack(children: [
         Positioned(
-            right: 0,
-            top: 0,
-            child: Assets.backgroundimageofferdetail.image(
-              width: 474.sp,
-              height: 572.sp,
-            ),),
+          right: 0,
+          top: 0,
+          child: Assets.backgroundimageofferdetail.image(
+            width: 474.sp,
+            height: 572.sp,
+          ),
+        ),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-              Padding(
-                padding:  EdgeInsets.only(top: 40.sp,left: 15.sp),
-                child: Row(
-                  children: [
-                    IconButton(onPressed: (){
-                        Get.back();
-                    }, icon:  Icon(Icons.arrow_back),),
-                      Text("Profile",style: TextStyle(
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w500,
-                     ),),
-                  ],
+            Padding(
+              padding: EdgeInsets.only(top: 40.sp, left: 15.sp),
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: Icon(Icons.arrow_back),
+                  ),
+                  Text("Profile", style: profileDeco),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 28.sp),
+              child: Align(
+                alignment: Alignment.center,
+                child: CircleAvatar(
+                  radius: 69.sp,
+                  backgroundImage: const CachedNetworkImageProvider(
+                      'https://images.unsplash.com/photo-1655720408861-8b04c0724fd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80'),
                 ),
               ),
-             Padding(
-               padding:  EdgeInsets.only(top:28.sp),
-               child: Align(
-                alignment: Alignment.center,
-                 child: CircleAvatar(
-                  radius: 69.sp,
-                  backgroundImage: const CachedNetworkImageProvider('https://images.unsplash.com/photo-1655720408861-8b04c0724fd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80'),
-                 ),
-               ),
-             ),
-             Padding(
-               padding:  EdgeInsets.only(top:20.sp,bottom: 2.sp), 
-               child: Align(
-                     alignment: Alignment.center,
-                child: Text("Shubham Kumar",style: TextStyle(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w600,
-                ),)),
-             ),
-             Padding(
-               padding:  EdgeInsets.only(bottom: 29.sp),
-               child: Align(
-                alignment: Alignment.center,
-                child: Text("shubhamkumar34@gmail.com",style: TextStyle(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w400,
-                ),)),
-             ),
-              // ignore: prefer_const_constructors
-              Divider(
-                color: ColorName.buttongrey,
-              ),
-              InkWell(
-                onTap: (){
-                  Get.toNamed(Routes.APP_USAGE);
-                },
-                child: const AppUsage(),),
-                 const Divider(
-                color: ColorName.buttongrey,
-              ),
-              InkWell(
-                onTap: (){
-
-                },
-                child: const Support(),),
-                 const Divider(
-                color: ColorName.buttongrey,
-              ),
-                InkWell(
-                onTap: (){
-
-                },
-                child: const TermsConditions(),),
-                 const Divider(
-                color: ColorName.buttongrey,
-              ),
-                InkWell(
-                onTap: (){
-
-                },
-                child: const PrivacyPolicy(),),
-                 const Divider(
-                color: ColorName.buttongrey,
-              ),
-                InkWell(
-                onTap: (){
-
-                },
-                child: const RateUs(),),
-                 const Divider(
-                color: ColorName.buttongrey,
-              ),
-                InkWell(
-                onTap: (){
-
-                },
-                child: const Language(),),
-                 const Divider(
-                color: ColorName.buttongrey,
-              ),
-              InkWell(
-                onTap: (){
-                  Get.dialog(
-                    AlertDialog(
-                    titlePadding: EdgeInsets.zero,
-                    contentPadding: EdgeInsets.zero,
-                    content: LogoutPopup(),
-                  ));
-                },
-                child: const Logout(),),
-                 const Divider(
-                color: ColorName.buttongrey,
-              ),
-
-              
-              Padding(
-                padding: EdgeInsets.only(top: 9.sp,bottom: 10.sp),
-                child: Align(
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 20.sp, bottom: 2.sp),
+              child: Align(
                   alignment: Alignment.center,
-                  child: Text("Follow us",style: TextStyle(fontSize: 14.sp),)),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CircleAvatar(
+                  child: Text(
+                    "Shubham Kumar",
+                    style: profileUserName,
+                  )),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 29.sp),
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "shubhamkumar34@gmail.com",
+                    style: profileEmail,
+                  )),
+            ),
+            // ignore: prefer_const_constructors
+            Divider(
+              color: ColorName.buttongrey,
+            ),
+            InkWell(
+              onTap: () {
+                Get.toNamed(Routes.APP_USAGE);
+              },
+              child: const AppUsage(),
+            ),
+            const Divider(
+              color: ColorName.buttongrey,
+            ),
+            InkWell(
+              onTap: () {},
+              child: const Support(),
+            ),
+            const Divider(
+              color: ColorName.buttongrey,
+            ),
+            InkWell(
+              onTap: () {},
+              child: const TermsConditions(),
+            ),
+            const Divider(
+              color: ColorName.buttongrey,
+            ),
+            InkWell(
+              onTap: () {},
+              child: const PrivacyPolicy(),
+            ),
+            const Divider(
+              color: ColorName.buttongrey,
+            ),
+            InkWell(
+              onTap: () {},
+              child: const RateUs(),
+            ),
+            const Divider(
+              color: ColorName.buttongrey,
+            ),
+            InkWell(
+              onTap: () {},
+              child: const Language(),
+            ),
+            const Divider(
+              color: ColorName.buttongrey,
+            ),
+            InkWell(
+              onTap: () {
+                Get.dialog(AlertDialog(
+                  titlePadding: EdgeInsets.zero,
+                  contentPadding: EdgeInsets.zero,
+                  content: LogoutPopup(),
+                ));
+              },
+              child: const Logout(),
+            ),
+            const Divider(
+              color: ColorName.buttongrey,
+            ),
+
+            Padding(
+              padding: EdgeInsets.only(top: 9.sp, bottom: 10.sp),
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Follow us",
+                    style: TextStyle(fontSize: 14.sp),
+                  )),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 20.sp,
+                  backgroundImage: CachedNetworkImageProvider(
+                      'https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688_1280.png'),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 23.sp, right: 23.sp),
+                  child: CircleAvatar(
                     radius: 20.sp,
-                    backgroundImage: CachedNetworkImageProvider('https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688_1280.png'),
+                    backgroundImage: CachedNetworkImageProvider(
+                        'https://cdn.pixabay.com/photo/2016/12/04/18/58/instagram-1882330_1280.png'),
                   ),
-                  Padding(
-                    padding:  EdgeInsets.only(left: 23.sp,right: 23.sp),
-                    child: CircleAvatar(
-                      radius: 20.sp,
-                      backgroundImage: CachedNetworkImageProvider('https://cdn.pixabay.com/photo/2016/12/04/18/58/instagram-1882330_1280.png'),
-                    ),
-                  ),
-                  CircleAvatar(
-                    radius: 20.sp,
-                    backgroundImage: CachedNetworkImageProvider('https://cdn.pixabay.com/photo/2016/08/27/03/02/youtube-1623577_1280.png'),
-                  )
-                ],
-              )
+                ),
+                CircleAvatar(
+                  radius: 20.sp,
+                  backgroundImage: CachedNetworkImageProvider(
+                      'https://cdn.pixabay.com/photo/2016/08/27/03/02/youtube-1623577_1280.png'),
+                )
+              ],
+            )
           ],
         )
       ]),
@@ -175,88 +178,83 @@ class AppUsage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(top: 9.sp,right: 29.sp,left: 24.sp,bottom: 9.sp),
+      padding:
+          EdgeInsets.only(top: 9.sp, right: 29.sp, left: 24.sp, bottom: 9.sp),
       child: Row(children: [
         Assets.appUsage.image(
-         width: 25.sp,
+          width: 25.sp,
           height: 20.sp,
         ),
         Padding(
-          padding:  EdgeInsets.only(left: 16.sp),
-          child: Text("App Usage",style: TextStyle(
-            fontSize: 17.sp,
-            fontWeight: FontWeight.w500,
-          ),),
+          padding: EdgeInsets.only(left: 16.sp),
+          child: Text(
+            "App Usage",
+            style: profileAppUse,
+          ),
         ),
         const Spacer(),
-          Assets.arrowright.image(
-            height: 10.sp,
-            width: 6.sp
-          ),
+        Assets.arrowright.image(height: 10.sp, width: 6.sp),
       ]),
     );
   }
 }
 
 class Support extends StatelessWidget {
-  const Support ({
+  const Support({
     Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
-           padding:  EdgeInsets.only(top: 9.sp,right: 29.sp,left: 24.sp,bottom: 9.sp),
+      padding:
+          EdgeInsets.only(top: 9.sp, right: 29.sp, left: 24.sp, bottom: 9.sp),
       child: Row(children: [
         Assets.support.image(
           width: 25.sp,
           height: 20.sp,
         ),
         Padding(
-          padding:  EdgeInsets.only(left: 16.sp),
-          child: Text("Support",style: TextStyle(
-            fontSize: 17.sp,
-            fontWeight: FontWeight.w500,
-          ),),
+          padding: EdgeInsets.only(left: 16.sp),
+          child: Text(
+            "Support",
+            style: profileText,
+          ),
         ),
         const Spacer(),
-          Assets.shareicon.image(
-            height: 15.sp,
-            width: 15.sp
-          ),
+        Assets.shareicon.image(height: 15.sp, width: 15.sp),
       ]),
     );
   }
 }
 
 class TermsConditions extends StatelessWidget {
-  const TermsConditions ({
+  const TermsConditions({
     Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
-           padding:  EdgeInsets.only(top: 9.sp,right: 29.sp,left: 24.sp,bottom: 9.sp),
-      child: Row (children: [ Assets.termsConditions.image(
-        width: 25.sp,
+      padding:
+          EdgeInsets.only(top: 9.sp, right: 29.sp, left: 24.sp, bottom: 9.sp),
+      child: Row(children: [
+        Assets.termsConditions.image(
+          width: 25.sp,
           height: 20.sp,
         ),
         Padding(
-          padding:  EdgeInsets.only(left: 16.sp),
-          child: Text("Terms & Conditions",style: TextStyle(
-            fontSize: 17.sp,
-            fontWeight: FontWeight.w500,
-          ),),
+          padding: EdgeInsets.only(left: 16.sp),
+          child: Text(
+            "Terms & Conditions",
+            style: profileText
+          ),
         ),
         const Spacer(),
-          Assets.shareicon.image(
-            height: 15.sp,
-            width: 15.sp
-          ),
-      ]
-      ),
+        Assets.shareicon.image(height: 15.sp, width: 15.sp),
+      ]),
     );
   }
 }
+
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({
     Key? key,
@@ -264,107 +262,107 @@ class PrivacyPolicy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding:  EdgeInsets.only(top: 9.sp,right: 29.sp,left: 24.sp,bottom: 9.sp),
+      padding:
+          EdgeInsets.only(top: 9.sp, right: 29.sp, left: 24.sp, bottom: 9.sp),
       child: Row(children: [
         Assets.privacyPolicy.image(
           width: 25.sp,
           height: 20.sp,
         ),
         Padding(
-          padding:  EdgeInsets.only(left: 16.sp),
-          child: Text("Privacy Policy",style: TextStyle(
-            fontSize: 17.sp,
-            fontWeight: FontWeight.w500,
-          ),),
+          padding: EdgeInsets.only(left: 16.sp),
+          child: Text(
+            "Privacy Policy",
+            style: profileText
+          ),
         ),
         const Spacer(),
-          Assets.shareicon.image(
-            height: 15.sp,
-            width: 15.sp
-          ),
+        Assets.shareicon.image(height: 15.sp, width: 15.sp),
       ]),
     );
   }
 }
+
 class RateUs extends StatelessWidget {
-  const RateUs ({
+  const RateUs({
     Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
-          padding:  EdgeInsets.only(top: 9.sp,right: 29.sp,left: 24.sp,bottom: 9.sp),
+      padding:
+          EdgeInsets.only(top: 9.sp, right: 29.sp, left: 24.sp, bottom: 9.sp),
       child: Row(children: [
         Assets.rateUs.image(
           width: 25.sp,
           height: 20.sp,
         ),
         Padding(
-          padding:  EdgeInsets.only(left: 16.sp),
-          child: Text("Rate Us",style: TextStyle(
-            fontSize: 17.sp,
-            fontWeight: FontWeight.w500,
-          ),),
+          padding: EdgeInsets.only(left: 16.sp),
+          child: Text(
+            "Rate Us",
+            style: profileText
+          ),
         ),
         const Spacer(),
-          Assets.arrowright.image(
-            height: 10.sp,
-            width: 6.sp
-          ),
+        Assets.arrowright.image(height: 10.sp, width: 6.sp),
       ]),
     );
   }
 }
+
 class Language extends StatelessWidget {
-  const Language ({
+  const Language({
     Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
-             padding:  EdgeInsets.only(top: 9.sp,right: 29.sp,left: 24.sp,bottom: 9.sp),
+      padding:
+          EdgeInsets.only(top: 9.sp, right: 29.sp, left: 24.sp, bottom: 9.sp),
       child: Row(children: [
         Assets.language.image(
           width: 25.sp,
           height: 20.sp,
         ),
         Padding(
-          padding:  EdgeInsets.only(left: 16.sp),
-          child: Text("Language",style: TextStyle(
-            fontSize: 17.sp,
-            fontWeight: FontWeight.w500,
-          ),),
+          padding: EdgeInsets.only(left: 16.sp),
+          child: Text(
+            "Language",
+            style: profileText
+          ),
         ),
         const Spacer(),
-          Text("ENG",style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w500,
-          ),)
+        Text(
+          "ENG",
+          style: profileEng,
+        )
       ]),
     );
   }
 }
+
 class Logout extends StatelessWidget {
-  const Logout ({
+  const Logout({
     Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
-             padding:  EdgeInsets.only(top: 9.sp,right: 29.sp,left: 24.sp,bottom: 9.sp),
+      padding:
+          EdgeInsets.only(top: 9.sp, right: 29.sp, left: 24.sp, bottom: 9.sp),
       child: Row(children: [
         Assets.logout.image(
           width: 25.sp,
           height: 20.sp,
         ),
         Padding(
-          padding:  EdgeInsets.only(left: 16.sp),
-          child: Text("Logout",style: TextStyle(
-            fontSize: 17.sp,
-            fontWeight: FontWeight.w500,
-          ),),
+          padding: EdgeInsets.only(left: 16.sp),
+          child: Text(
+            "Logout",
+            style: profileText
+          ),
         ),
-        
       ]),
     );
   }

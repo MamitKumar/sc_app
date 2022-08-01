@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../gen/colors.gen.dart';
+import '../../../data/all_popup_dec.dart';
 
 class OppsPopPup extends StatelessWidget {
   const OppsPopPup({
@@ -25,10 +26,7 @@ class OppsPopPup extends StatelessWidget {
                   vertical: 20.sp),
               child: Text(
                 "Opps!",
-                style: TextStyle(
-                    fontSize: 22.sp,
-                    color: ColorName.white,
-                    fontWeight: FontWeight.w500),textAlign: TextAlign.center,
+                style: title,textAlign: TextAlign.center,
               ),
             ),
           ),
@@ -41,10 +39,7 @@ class OppsPopPup extends StatelessWidget {
     top: 31.sp, left: 17.sp, right: 17.sp,bottom: 40.sp),
                   child: Text(
     "Wait! some error has occured. \n \n Your transaction was not completed successfully due to some error. \n\nPlease try again.",
-                style: TextStyle(
-                    fontSize: 18.sp,
-                    color: ColorName.black,
-                    fontWeight: FontWeight.w400),textAlign: TextAlign.center,),
+                style: oppsDis,textAlign: TextAlign.center,),
                 ),
                 
                 InkWell(
@@ -52,25 +47,12 @@ class OppsPopPup extends StatelessWidget {
                     Get.back();
                   },
                   child: Container(
-                    decoration: BoxDecoration(
-    borderRadius:
-        BorderRadius.circular(360.sp),
-    color: ColorName.red,
-    boxShadow: [
-      BoxShadow(
-        color: ColorName.popupboxshadow,
-        blurRadius: 24.sp,
-      )
-    ]
-                    ),
+                    decoration:  oppsContanerDec,
                     child: Padding(
     padding: EdgeInsets.symmetric(
         vertical: 15.sp, horizontal: 65.sp),
     child: Text("Try again",
-                style: TextStyle(
-                    fontSize: 18.sp,
-                    color: ColorName.white,
-                    fontWeight: FontWeight.w500),),
+                style: oppsTryAgainDec,),
                     ),
                   ),
                 )

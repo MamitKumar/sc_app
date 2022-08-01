@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../gen/colors.gen.dart';
+import '../../../data/daily_reward.dart';
 
 class DailyRewardTabBar extends StatelessWidget {
   const DailyRewardTabBar({Key? key}) : super(key: key);
@@ -18,10 +17,7 @@ class DailyRewardTabBar extends StatelessWidget {
                       },
                       child: Text(
                         "Daily Rewards",
-                        style: TextStyle(
-                            color: ColorName.black,
-                            fontSize: 22.sp,
-                            fontWeight: FontWeight.w600),
+                        style: dailyR_Title,
                       )),
                       SizedBox(width: 42.sp,),
                    InkWell(
@@ -30,10 +26,7 @@ class DailyRewardTabBar extends StatelessWidget {
                       },
                       child: Text(
                         "Refer & Earn",
-                        style: TextStyle(
-                            color: ColorName.dailrewardbuttongrey,
-                            fontSize: 22.sp,
-                            fontWeight: FontWeight.w600),
+                        style: dailyR_Reffer,
                       )),
                 ],
               ),

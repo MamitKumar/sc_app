@@ -20,6 +20,8 @@ class Assets {
   static const AssetGenImage rateUs = AssetGenImage('assets/RateUs.png');
   static const AssetGenImage simpleCashLogo =
       AssetGenImage('assets/Simple Cash logo.png');
+  static const AssetGenImage simpleCashLogoAppday =
+      AssetGenImage('assets/Simple_cash_logo_appday.png');
   static const AssetGenImage support = AssetGenImage('assets/Support.png');
   static const AssetGenImage termsConditions =
       AssetGenImage('assets/TermsConditions.png');
@@ -28,9 +30,12 @@ class Assets {
   static const AssetGenImage backgroundimageofferdetail =
       AssetGenImage('assets/backgroundimageofferdetail.png');
   static const AssetGenImage clipboard = AssetGenImage('assets/clipboard.png');
+  static const AssetGenImage coin = AssetGenImage('assets/coin.png');
   static const AssetGenImage facebook = AssetGenImage('assets/facebook.png');
   static const AssetGenImage instagramme =
       AssetGenImage('assets/instagramme.png');
+  static const AssetGenImage logoSimpleCash =
+      AssetGenImage('assets/logo simple cash.png');
   static const AssetGenImage mojdeail = AssetGenImage('assets/mojdeail.png');
   static const AssetGenImage paytmlogo = AssetGenImage('assets/paytmlogo.png');
   static const AssetGenImage profileAvtar =

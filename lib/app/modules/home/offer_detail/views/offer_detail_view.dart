@@ -30,7 +30,7 @@ class OfferDetailView extends GetView<OfferDetailController> {
                 AppbarOfferDetail(),
                 OfferDetail_ImageBanner(
                   bannerImage:
-                      'https://compai.pub/v1/png/551cacde03b44765b2f6128954ff6df726f30ac0d82239d85894445c2a1a900b',
+                      'https://compai.pub/v1/png/5e6e3c2986e535ceb43d8038800f131d05a9fefec240d6c02b2e161469f7b1e6',
                 ),
                 AppTile(
                   appIcon:

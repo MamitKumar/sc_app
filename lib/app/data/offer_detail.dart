@@ -24,8 +24,8 @@ final offerButton = BoxDecoration(
       ),
       BoxShadow(),
     ],
-    color: ColorName.offfeButton,
-    borderRadius: BorderRadius.circular(24.sp));
+    color: ColorName.buttonofferdetrail,
+    borderRadius: BorderRadius.circular(360.sp));
 final offerAppTitle = TextStyle(
   fontSize: 16.sp,
   fontWeight: FontWeight.w600,

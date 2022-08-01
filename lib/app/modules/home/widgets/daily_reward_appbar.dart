@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../../../gen/colors.gen.dart';
+import '../../../data/daily_reward.dart';
 import '../../../routes/app_pages.dart';
 import 'appbar.dart';
 
@@ -26,10 +27,7 @@ class DailyRewardAppBar extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 53.sp),
             child: Text(
-              "Daily Rewards",style: TextStyle(
-                fontSize: 22.sp,
-                fontWeight: FontWeight.w500
-            ),
+              "Daily Rewards",style: dailyR_appbarTitle,
             ),
           ),
           Spacer(),

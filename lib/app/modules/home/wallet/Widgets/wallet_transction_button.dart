@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../data/wallet_decoraction.dart';
+
 class TransctionButton extends StatelessWidget {
   const TransctionButton({
     Key? key,
@@ -16,10 +18,7 @@ class TransctionButton extends StatelessWidget {
         children: [
           Text(
             "Transactions",
-            style: TextStyle(
-              fontSize: 19.sp,
-              fontWeight: FontWeight.w600,
-            ),
+            style: walletTransctionText,
           ),
           Icon(
             Icons.arrow_forward_ios_rounded,

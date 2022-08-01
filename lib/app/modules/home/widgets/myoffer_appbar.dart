@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../gen/colors.gen.dart';
+import '../../../data/my_offer.dart';
 import '../../../routes/app_pages.dart';
 import 'appbar.dart';
 
@@ -25,7 +26,7 @@ class MyOfferAppBar extends StatelessWidget {
                 child: Text(
                   "My Offers",
                   style:
-                      TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w500),
+                      myOfferTitle,
                 ),
               ),
               Spacer(),
@@ -39,10 +40,7 @@ class MyOfferAppBar extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.only(top: 50.sp),
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: ColorName.backgroundSecondry, width: 1.6),
-                          borderRadius: BorderRadius.circular(28.sp)),
+                      decoration: myOfferCard,
                       child: Padding(
                         padding: EdgeInsets.only(
                             left: 18.sp,

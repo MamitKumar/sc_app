@@ -27,3 +27,13 @@ final walletWitrallBalance= TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 18.sp,
 );
+
+final walletPayoutButton=TextStyle(
+              fontSize: 19.sp,
+              fontWeight: FontWeight.w600,
+            );
+
+final walletTransctionText=TextStyle(
+              fontSize: 19.sp,
+              fontWeight: FontWeight.w600,
+            );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../data/wallet_decoraction.dart';
+
 class PayoutButton extends StatelessWidget {
   const PayoutButton({
     Key? key,
@@ -16,10 +18,7 @@ class PayoutButton extends StatelessWidget {
         children: [
           Text(
             "Payouts",
-            style: TextStyle(
-              fontSize: 19.sp,
-              fontWeight: FontWeight.w600,
-            ),
+            style: walletPayoutButton,
           ),
           Icon(
             Icons.arrow_forward_ios_rounded,
